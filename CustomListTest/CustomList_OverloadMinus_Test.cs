@@ -9,7 +9,7 @@ namespace CustomListTest
         [Test]
         public void SubtractsFromFirstList()
         {
-            NList<int> list3;
+            NList<int> list3 = new NList<int>();
             NList<int> expected;
 
             NList<int> list1 = new NList<int>() { 10, 9, 9 };
@@ -24,7 +24,7 @@ namespace CustomListTest
         [Test]
         public void EmptyFirstList()
         {
-            NList<int> list3;
+            NList<int> list3 = new NList<int>();
 
             NList<int> list1 = new NList<int>() {  };
             NList<int> list2 = new NList<int>() { 1, 9, 9 };
@@ -37,7 +37,7 @@ namespace CustomListTest
         [Test]
         public void EmptySecondList()
         {
-            NList<int> list3;
+            NList<int> list3 = new NList<int>();
 
             NList<int> list1 = new NList<int>() { 1, 9, 9 };
             NList<int> list2 = new NList<int>() {  };
@@ -50,7 +50,7 @@ namespace CustomListTest
         [Test]
         public void SubtractListFromItself()
         {
-            NList<int> list3;
+            NList<int> list3 = new NList<int>();
 
             NList<int> list1 = new NList<int>() { 1, 9, 9 };
 
@@ -64,7 +64,7 @@ namespace CustomListTest
         [Test]
         public void ListOfStrings()
         {
-            NList<string> list3;
+            NList<string> list3 = new NLis<string>t();
             NList<string> expected;
 
             NList<string> list1 = new NList<string>() { "trent", "daniels","false" };
@@ -80,12 +80,27 @@ namespace CustomListTest
         [ExpectedException(typeof(ArrayTypeMismatchException))]
         public void SubtractDifferentTypeLists()
         {
-            NList<string> list3;
+            NList<string> list3 = new NList<string>();
 
             NList<string> list1 = new NList<string>() { "trent", "daniels", "false" };
             NList<int> list2 = new NList<int>() { 2 };
 
             list3 = list1 - list2;
+        }
+
+        [Test]
+        public void SubtractMultipleLists()
+        {
+            NList<int> list4 = new NList<int>();
+            NList<int> expected = new NList<int>();
+            NList<int> list1 = new NList<int>() { 1, 2, 3 };
+            NList<int> list2 = new NList<int>() { 2, 3 };
+            NList<int> list3 = new NList<int>() { 2 };
+
+            list4 = list1 - list2 - list3;
+            expected = new NList<int>() { 1, 2 };
+
+            CollectionAssert.AreEqual(expected, list4);
         }
     }
 }

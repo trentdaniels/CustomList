@@ -9,7 +9,7 @@ namespace CustomListTest
         [Test]
         public void AddsTwoNLists()
         {
-            NList<int> list3;
+            NList<int> list3 = new NList<int>();
 
             NList<int> list1 = new NList<int>() { 1, 2, 3 };
             NList<int> list2 = new NList<int>() { 4, 5, 6 };
@@ -22,7 +22,7 @@ namespace CustomListTest
         [Test]
         public void SecondListAppendedToEnd()
         {
-            NList<int> list3;
+            NList<int> list3 = new NList<int>();
 
             NList<int> list1 = new NList<int>() { 1, 2, 3 };
             NList<int> list2 = new NList<int>() { 4, 5, 6 };
@@ -61,7 +61,7 @@ namespace CustomListTest
         [Test]
         public void AddEmptyList()
         {
-            NList<int> list3;
+            NList<int> list3 = new NList<int>();
 
             NList<int> list1 = new NList<int>() { 3 };
             NList<int> list2 = new NList<int>() { };
@@ -74,7 +74,7 @@ namespace CustomListTest
         [Test]
         public void AddTwoEmptyLists()
         {
-            NList<int> list3;
+            NList<int> list3 = new NList<int>();
 
             NList<int> list1 = new NList<int>() { };
             NList<int> list2 = new NList<int>() { };
@@ -87,8 +87,7 @@ namespace CustomListTest
         [ExpectedException(typeof(ArrayTypeMismatchException))]
         public void AddDifferentTypeLists()
         {
-            NList<string> list3;
-            NList<string> expected;
+            NList<string> list3 = new NList<string>();
 
             NList<string> list1 = new NList<string>() { "trent", "daniels", "false" };
             NList<int> list2 = new NList<int>() { 2 };
