@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{B17FB8F1-AD0E-496A-9B89-39F5005AFD29}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CustomListTest/CustomList_Iteration_Test.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CustomList/NList.cs">
     <Files>
-      <File FileName="CustomListTest/CustomList_Add_Test.cs" Line="73" Column="21" />
-      <File FileName="CustomList/NList.cs" Line="30" Column="10" />
-      <File FileName="CustomListTest/CustomList_Count_Test.cs" Line="81" Column="13" />
-      <File FileName="CustomListTest/CustomList_Indexer_Test.cs" Line="79" Column="25" />
+      <File FileName="CustomListTest/CustomList_Add_Test.cs" Line="79" Column="1" />
+      <File FileName="CustomList/NList.cs" Line="25" Column="10" />
+      <File FileName="CustomListTest/CustomList_Count_Test.cs" Line="16" Column="23" />
+      <File FileName="CustomListTest/CustomList_Indexer_Test.cs" Line="85" Column="1" />
       <File FileName="CustomListTest/CustomList_Zip_Test.cs" Line="75" Column="1" />
       <File FileName="CustomListTest/CustomList_ToString_Test.cs" Line="43" Column="1" />
       <File FileName="CustomListTest/CustomList_Remove_Test.cs" Line="87" Column="1" />
       <File FileName="CustomListTest/CustomList_OverloadPlus_Test.cs" Line="82" Column="19" />
       <File FileName="CustomListTest/CustomList_OverloadMinus_Test.cs" Line="107" Column="1" />
-      <File FileName="CustomListTest/CustomList_Iteration_Test.cs" Line="59" Column="72" />
+      <File FileName="CustomListTest/CustomList_Iteration_Test.cs" Line="76" Column="1" />
+      <File FileName="CustomList/Program.cs" Line="10" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ClassPad">
@@ -21,7 +22,13 @@
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
           <Node name="CustomList" expanded="True">
-            <Node name="CustomListTest" selected="True" />
+            <Node name="CustomListTest" expanded="True">
+              <Node name="CustomListTest" expanded="True">
+                <Node name="CustomList_Add_Test" expanded="True">
+                  <Node name="AddMoreThan50Items" selected="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -29,7 +36,9 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/trent/Desktop/devCodeCamp/Projects/CustomList/CustomList/NList.cs" relfile="CustomList/NList.cs" line="25" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.CustomList PreferredExecutionTarget="MonoDevelop.Default" />

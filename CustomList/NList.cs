@@ -19,28 +19,29 @@ namespace CustomList
         public NList()
         {
             count = 0;
-            array = new T[count];
         }
         // Methods
         public void Add(T item)
         {
-            Console.WriteLine("Adding Item");
-
             count = GetCount();
-
-            array[count] = item;
-            count++;
+            array = new T[Count];
+            array[Count - 1] = item;
         }
 
         private int GetCount()
         {
-            count = 0;
-            foreach(T item in array)
+            int counter = 0;
+            for (int i = 0; i <= count; i++)
             {
-                count++;
+                counter++;
             }
-            return count;
+            return counter;
         }
+        private void IncreaseCount()
+        {
+            count++;
+        }
+
 
 
     }

@@ -68,12 +68,12 @@ namespace CustomListTest
         {
             NList<int> nums = new NList<int>();
 
-            for (int i = 0; i < 56; i++)
+            for (int i = 0; i <= 55; i++)
             {
-                nums.Add(i + 1);
+                nums.Add(i);
             }
 
-            Assert.AreEqual(55, nums[54]);
+            Assert.AreEqual(55, nums[55]);
 
 
         }

@@ -13,7 +13,7 @@ namespace CustomListTest
 
             NList<int> nums = new NList<int>();
             nums.Add(num1);
-
+            Console.ReadLine();
             Assert.AreEqual(1, nums.Count);
             
         }
