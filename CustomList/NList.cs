@@ -5,25 +5,34 @@ namespace CustomList
     {
         // Members
         private int count;
-        private T value;
         private T[] array;
+
+        public T this[int index]
+        {
+            get => array[index];
+            set => array[index] = value;
+        }
 
         public int Count { get => count; }
 
         // Constructor
         public NList()
         {
-            count = GetCount();
+            count = 0;
+            array = new T[count];
         }
         // Methods
         public void Add(T item)
         {
-            array = new T[count];
+            Console.WriteLine("Adding Item");
+
+            count = GetCount();
+
             array[count] = item;
             count++;
         }
 
-        public int GetCount()
+        private int GetCount()
         {
             count = 0;
             foreach(T item in array)
@@ -33,10 +42,6 @@ namespace CustomList
             return count;
         }
 
-        public T this[int index]
-        {
-            get => array[index];
-            set => array[index] = value;
-        }
+
     }
 }

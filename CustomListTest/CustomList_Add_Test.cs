@@ -70,7 +70,7 @@ namespace CustomListTest
 
             for (int i = 0; i < 56; i++)
             {
-                nums[i].Add(i + 1);
+                nums.Add(i + 1);
             }
 
             Assert.AreEqual(55, nums[54]);

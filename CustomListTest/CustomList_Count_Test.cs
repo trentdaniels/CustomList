@@ -79,7 +79,7 @@ namespace CustomListTest
         {
             NList<int> nums = new NList<int>();
 
-            Assert.IsFalse(typeof(NList).GetProperty("Count").CanWrite);
+            Assert.IsFalse(typeof(NList<int>).GetProperty("Count").CanWrite);
         }
 
     }
