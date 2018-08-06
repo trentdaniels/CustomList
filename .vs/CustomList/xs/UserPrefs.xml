@@ -1,12 +1,14 @@
 ﻿<Properties StartupConfiguration="{B17FB8F1-AD0E-496A-9B89-39F5005AFD29}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CustomListTest/CustomList_ToString_Test.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CustomListTest/CustomList_OverloadMinus_Test.cs">
     <Files>
       <File FileName="CustomListTest/CustomList_Add_Test.cs" Line="76" Column="43" />
-      <File FileName="CustomListTest/CustomList_Count_Test.cs" Line="82" Column="71" />
-      <File FileName="CustomListTest/CustomList_Indexer_Test.cs" Line="62" Column="6" />
-      <File FileName="CustomListTest/CustomList_Iteration_Test.cs" Line="69" Column="44" />
-      <File FileName="CustomListTest/CustomList_Remove_Test.cs" Line="82" Column="43" />
-      <File FileName="CustomListTest/CustomList_ToString_Test.cs" Line="8" Column="14" />
+      <File FileName="CustomListTest/CustomList_Count_Test.cs" Line="84" Column="9" />
+      <File FileName="CustomListTest/CustomList_Indexer_Test.cs" Line="79" Column="25" />
+      <File FileName="CustomListTest/CustomList_Iteration_Test.cs" Line="72" Column="9" />
+      <File FileName="CustomListTest/CustomList_Remove_Test.cs" Line="3" Column="18" />
+      <File FileName="CustomListTest/CustomList_ToString_Test.cs" Line="32" Column="9" />
+      <File FileName="CustomListTest/CustomList_OverloadPlus_Test.cs" Line="84" Column="45" />
+      <File FileName="CustomListTest/CustomList_OverloadMinus_Test.cs" Line="10" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ClassPad">

@@ -81,5 +81,6 @@ namespace CustomListTest
 
             Assert.IsFalse(typeof(NList).GetProperty("Count").CanWrite);
         }
+
     }
 }

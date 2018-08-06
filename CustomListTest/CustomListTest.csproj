@@ -37,6 +37,8 @@
     <Compile Include="CustomList_Iteration_Test.cs" />
     <Compile Include="CustomList_Remove_Test.cs" />
     <Compile Include="CustomList_ToString_Test.cs" />
+    <Compile Include="CustomList_OverloadPlus_Test.cs" />
+    <Compile Include="CustomList_OverloadMinus_Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

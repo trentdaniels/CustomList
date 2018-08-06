@@ -30,11 +30,12 @@ namespace CustomListTest
         }
 
         [Test]
+        [ExpectedException(typeof(IndexOutOfRangeException))]
         public void NegativeIndexDoesNotExist()
         {
             NList<int> nums = new NList<int>() { 12, 14, 15, 16 };
 
-            Assert.IsNullOrEmpty(nums[-1]);
+            nums[-1] = 15;
         }
 
         [Test]
@@ -57,6 +58,25 @@ namespace CustomListTest
             }
 
             Assert.AreEqual(49, nums[48]);
+        }
+
+        [Test]
+        [ExpectedException(typeof(IndexOutOfRangeException))]
+        public void IndexIsNegative()
+        {
+            NList<int> nums = new NList<int>() { };
+            for (int i = -15; i < 0; i++)
+            {
+                nums[i] = 16;
+            }
+        }
+
+        [Test]
+        [ExpectedException(typeof(IndexOutOfRangeException))]
+        public void IndexAboveCount()
+        {
+            NList<int> nums = new NList<int>() { 1, 2, 3 };
+            nums[6] = 9;
         }
 
     }
