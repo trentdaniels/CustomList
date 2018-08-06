@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
+using CustomList;
 namespace CustomListTest
 {
     [TestFixture]
@@ -10,7 +11,7 @@ namespace CustomListTest
         {
             int num1 = 12;
 
-            CustomList<int> nums = new CustomList<int>();
+            NList<int> nums = new NList<int>();
             nums.Add(num1);
 
             Assert.AreEqual(1, nums.Count);
@@ -25,7 +26,7 @@ namespace CustomListTest
             int firstCount;
             int secondCount;
 
-            CustomList<int> nums = new CustomList<int>();
+            NList<int> nums = new NList<int>();
             nums.Add(num1);
             firstCount = nums.Count;
 
@@ -44,7 +45,7 @@ namespace CustomListTest
             int firstCount;
             int secondCount;
 
-            CustomList<int> nums = new CustomList<int>();
+            NList<int> nums = new NList<int>();
             nums.Add(num1);
             firstCount = nums.Count;
 
@@ -63,7 +64,7 @@ namespace CustomListTest
             int firstCount;
             int secondCount;
 
-            CustomList<int> nums = new CustomList<int>();
+            NList<int> nums = new NList<int>();
             nums.Add(num1);
             firstCount = nums.Count;
 
@@ -76,7 +77,7 @@ namespace CustomListTest
         [Test]
         public void CountIsReadOnly()
         {
-            CustomList<int> nums = new CustomList<int>();
+            NList<int> nums = new NList<int>();
 
             Assert.IsFalse(nums.GetProperty("Count").CanWrite);
         }

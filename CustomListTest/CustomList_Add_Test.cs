@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
+using CustomList;
 
 namespace CustomListTest
 {
@@ -10,7 +11,7 @@ namespace CustomListTest
         public void AddItemToEmptyList()
         {
             int num = 12;
-            BList<int> nums = new BList<int>();
+            NList<int> nums = new NList<int>();
 
 
             nums.Add(num);
@@ -23,7 +24,7 @@ namespace CustomListTest
         {
             int num1 = 20;
             int num2 = 30;
-            BList<int> nums = new BList<int>();
+            NList<int> nums = new NList<int>();
 
             nums.Add(num1);
             nums.Add(num2);
@@ -31,7 +32,7 @@ namespace CustomListTest
             Assert.AreEqual(num2, nums[1]);
         }
         [Test]
-        public void AddManyItemsToList()
+        public void IndexOfListInDoubleDigits()
         {
             int num1 = 1;
             int num2 = 2;
@@ -45,7 +46,7 @@ namespace CustomListTest
             int num10 = 10;
             int num11 = 11;
 
-            BList<int> nums = new BList<int>();
+            NList<int> nums = new NList<int>();
 
             nums.Add(num1);
             nums.Add(num2);
