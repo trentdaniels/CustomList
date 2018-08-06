@@ -83,6 +83,18 @@ namespace CustomListTest
 
             Assert.AreEqual(0, list3.Count);
         }
+        [Test]
+        [ExpectedException(typeof(ArrayTypeMismatchException))]
+        public void AddDifferentTypeLists()
+        {
+            NList<string> list3;
+            NList<string> expected;
+
+            NList<string> list1 = new NList<string>() { "trent", "daniels", "false" };
+            NList<int> list2 = new NList<int>() { 2 };
+
+            list3 = list1 + list2;
+        }
 
     }
 }

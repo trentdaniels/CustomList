@@ -39,6 +39,7 @@
     <Compile Include="CustomList_ToString_Test.cs" />
     <Compile Include="CustomList_OverloadPlus_Test.cs" />
     <Compile Include="CustomList_OverloadMinus_Test.cs" />
+    <Compile Include="CustomList_Zip_Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
