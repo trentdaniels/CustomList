@@ -32,7 +32,7 @@ namespace CustomListTest
             Assert.AreEqual(num2, nums[1]);
         }
         [Test]
-        public void IndexOfListInDoubleDigits()
+        public void AddMoreThan10Items()
         {
             int num1 = 1;
             int num2 = 2;
@@ -61,6 +61,21 @@ namespace CustomListTest
             nums.Add(num11);
 
             Assert.AreEqual(num11, nums[10]);
+        }
+
+        [Test]
+        public void AddMoreThan50Items()
+        {
+            NList<int> nums = new NList<int>();
+
+            for (int i = 0; i < 56; i++)
+            {
+                nums[i].Add(i + 1);
+            }
+
+            Assert.AreEqual(55, nums[54]);
+
+
         }
 
     }

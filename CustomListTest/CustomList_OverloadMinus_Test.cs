@@ -64,7 +64,7 @@ namespace CustomListTest
         [Test]
         public void ListOfStrings()
         {
-            NList<string> list3 = new NLis<string>t();
+            NList<string> list3 = new NList<string>();
             NList<string> expected;
 
             NList<string> list1 = new NList<string>() { "trent", "daniels","false" };

@@ -30,5 +30,13 @@ namespace CustomListTest
             Assert.AreEqual(nums.ToString(", "), "1, 2, 3");
         }
 
+        [Test]
+        [ExpectedException(typeof(NullReferenceException))]
+        public void EmptyList()
+        {
+            NList<int> nums = new NList() { };
+            nums.ToString();
+        }
+
     }
 }
