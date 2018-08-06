@@ -35,6 +35,8 @@
     <Compile Include="CustomList_Count_Test.cs" />
     <Compile Include="CustomList_Indexer_Test.cs" />
     <Compile Include="CustomList_Iteration_Test.cs" />
+    <Compile Include="CustomList_Remove_Test.cs" />
+    <Compile Include="CustomList_ToString_Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
