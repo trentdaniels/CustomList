@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{B17FB8F1-AD0E-496A-9B89-39F5005AFD29}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CustomListTest/CustomList_Add_Test.cs">
+    <Files>
+      <File FileName="CustomListTest/CustomList_Add_Test.cs" Line="26" Column="14" />
+      <File FileName="CustomListTest/CustomList_Count_Test.cs" Line="79" Column="36" />
+      <File FileName="CustomListTest/CustomList_Indexer_Test.cs" Line="13" Column="36" />
+      <File FileName="CustomListTest/CustomList_Iteration_Test.cs" Line="15" Column="36" />
+      <File FileName="CustomList/Program.cs" Line="1" Column="1" />
+      <File FileName="CustomList/NList.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="CustomList" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.CustomListTest FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.CustomList PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MultiItemStartupConfigurations />
+</Properties>
