@@ -62,7 +62,7 @@ namespace CustomListTest
 
             for (int i = 0; i < 6; i++)
             {
-                if (nums.Contains(i))
+                if (nums[i] == i)
                 {
                     nums.Remove(i);
                 }

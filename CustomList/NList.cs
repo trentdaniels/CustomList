@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace CustomList
 {
-    public class NList<T>
+    public class NList<T> : IEnumerable<T>
     {
         // Members
         private int count;
@@ -44,6 +44,7 @@ namespace CustomList
 
         }
 
+      
         public bool Remove(T item)
         {
             bool didRemoveItem = false;
@@ -75,6 +76,12 @@ namespace CustomList
         private int UpdateCountDown()
         {
             int counter = 0;
+            if (count == 0)
+            {
+                return counter;
+            }
+
+
             foreach(T item in storedValues)
             {
                 if (EqualityComparer<T>.Default.Equals(item, default(T)))
@@ -115,19 +122,32 @@ namespace CustomList
         {
             return count == capacity;
         }
-        //public void Remove(T item)
-        //{
-        //    for (int i = 0; i <= count; i++)
-        //    {
-        //        bool matchedItem = array[i] == item;
-                
-        //        if (array[i] == item)
-        //        {
-                    
-        //        }
-        //    }
 
-        //}
+        public static NList<T> operator + (NList<T>list1, NList<T>list2)
+        {
+            NList<T> newList = new NList<T>();
+
+            foreach(T item1 in list1)
+            {
+                newList.Add(item1);
+            }
+            foreach(T item2 in list2)
+            {
+                newList.Add(item2);
+            }
+            return newList;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            yield return GetEnumerator();
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
 
 
 
