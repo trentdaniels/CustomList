@@ -24,7 +24,7 @@ namespace CustomListTest
         {
             int num1 = 20;
             int num2 = 30;
-            NList<int> nums = new NList<int>();
+            NList<int> nums = new NList<int>() {15, 30, 45};
 
             nums.Add(num1);
             nums.Add(num2);

@@ -82,5 +82,12 @@ namespace CustomListTest
             Assert.IsFalse(typeof(NList<int>).GetProperty("Count").CanWrite);
         }
 
+        [Test]
+        public void CountStartsAtZero()
+        {
+            NList<int> nums = new NList<int>();
+            Assert.AreEqual(0, nums.Count);
+        }
+
     }
 }

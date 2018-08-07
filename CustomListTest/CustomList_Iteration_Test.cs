@@ -1,75 +1,77 @@
-﻿//using NUnit.Framework;
-//using System;
-//using CustomList;
-//namespace CustomListTest
-//{
-//    [TestFixture]
-//    public class CustomList_Iteration_Test
-//    {
-//        [Test]
-//        public void ChangesValueAtIndex()
-//        {
-//            int num1 = 10;
-//            int num2 = 20;
-//            int num3 = 30;
+﻿using NUnit.Framework;
+using System;
+using CustomList;
 
-//            NList<int> nums = new NList<int>();
-//            nums.Add(num1);
-//            nums.Add(num2);
-//            nums.Add(num3);
+namespace CustomListTest
+{
+    [TestFixture]
+    public class CustomList_Iteration_Test
+    {
+        [Test]
+        public void ChangesValueAtIndex()
+        {
+            int num1 = 10;
+            int num2 = 20;
+            int num3 = 30;
 
-//            for (int i = 0; i < 50; i++)
-//            {
-//                nums[i] += 5;
-//            }
+            NList<int> nums = new NList<int>();
+            nums.Add(num1);
+            nums.Add(num2);
+            nums.Add(num3);
 
-//            Assert.AreEqual(25, nums[1]);
+            for (int i = 0; i < 50; i++)
+            {
+                nums[i] += 5;
+            }
 
-//        }
+            Assert.AreEqual(25, nums[1]);
 
-//        [Test]
-//        public void GetsIndexAfterIteration()
-//        {
-//            NList<int> nums = new NList<int>() { 15, 30, 45 };
+        }
 
-//            for (int i = 0; i < 3; i++)
-//            {
-//                nums.Add(nums.IndexOf(i));
-//            }
+        [Test]
+        public void GetsIndexAfterIteration()
+        {
+            NList<int> nums = new NList<int>();
 
-//            Assert.AreEqual(1, nums[3]);
-//        }
+            for (int i = 0; i < 3; i++)
+            {
+                nums[i] = i;
+                nums.Add(nums[i]);
+            }
 
-//        [Test]
-//        public void CountAfterIteration()
-//        {
-//            NList<int> nums = new NList<int>();
+            Assert.AreEqual(1, nums[3]);
+        }
 
-//            for (int i = 0; i < 6; i++)
-//            {
-//                nums.Add(i);
-//            }
+        [Test]
+        public void CountAfterIteration()
+        {
+            NList<int> nums = new NList<int>();
 
-//            Assert.AreEqual(6, nums.Count);
-//        }
+            for (int i = 0; i < 6; i++)
+            {
+                nums.Add(i);
+            }
 
-//        [Test]
-//        public void RemoveFromList()
-//        {
-//            NList<int> nums = new NList<int>() { 15, 14, 13, 1, 2, 3 };
+            Assert.AreEqual(6, nums.Count);
+        }
 
-//            for (int i = 0; i < 6; i++)
-//            {
-//                if (nums.Contains(i))
-//                {
-//                    nums.Remove(i);
-//                }
-//            }
+        [Test]
+        public void RemoveFromList()
+        {
+            NList<int> nums = new NList<int>() { 15, 14, 13, 1, 2, 3 };
 
-//            Assert.AreEqual(3, nums.Count);
-//        }
+            for (int i = 0; i < 6; i++)
+            {
+                if (nums.Contains(i))
+                {
+                    nums.Remove(i);
+                }
+            }
+
+            Assert.AreEqual(3, nums.Count);
+        }
 
 
                            
-//    }
-//}
+    }
+}
