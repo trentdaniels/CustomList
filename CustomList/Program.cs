@@ -31,7 +31,7 @@ namespace CustomList
             }
             Console.WriteLine(list3.Count);
             Console.WriteLine(list1.Count);
-
+            // loop through list1 and add values into list3 before remove function
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace CustomList
 {
-    public class NList<T> //: IEnumerable<T>
+    public class NList<T> : IEnumerable
     {
         // Members
         private int count;
@@ -46,7 +46,11 @@ namespace CustomList
         public static NList<T> operator - (NList<T>list1, NList<T> list2)
         {
             NList<T> newList = new NList<T>();
-            newList = list1;
+
+            for (int i = 0; i < list1.count; i++)
+            {
+                newList.Add(list1[i]);
+            }
       
             for (int i = 0; i < newList.count; i++)
             {
@@ -146,15 +150,12 @@ namespace CustomList
         }
 
 
-        //IEnumerator IEnumerable.GetEnumerator()
-        //{
-        //    return GetEnumerator();
-        //}
 
-        //public IEnumerator<T> GetEnumerator()
-        //{
-        //    yield return GetEnumerator();
-        //}
+
+        public IEnumerator GetEnumerator()
+        {
+            yield return 1;
+        }
 
 
 
