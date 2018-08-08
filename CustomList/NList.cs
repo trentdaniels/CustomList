@@ -28,7 +28,7 @@ namespace CustomList
             storedValues = new T[capacity];
         }
 
-        public static NList<T> operator +(NList<T> list1, NList<T> list2)
+        public static NList<T> operator + (NList<T> list1, NList<T> list2)
         {
             NList<T> newList = new NList<T>();
 
@@ -43,7 +43,26 @@ namespace CustomList
             return newList;
 
         }
+        public static NList<T> operator - (NList<T>list1, NList<T> list2)
+        {
+            NList<T> newList = new NList<T>();
+            newList = list1;
+      
+            for (int i = 0; i < newList.count; i++)
+            {
+                for (int j = 0; j < list2.count; j++)
+                {
+                    if (list2[i].Equals(list2[j]))
+                    {
+                        newList.Remove(list2[j]);
 
+                    }
+                }
+               
+            }
+
+            return newList;
+        }
 
 
         // Methods
@@ -78,10 +97,6 @@ namespace CustomList
 
             }
             count = UpdateCountDown();
-            if(didRemoveItem == false)
-            {
-                throw new Exception("You dumbass. Remove something IN THE LIST next time.");
-            }
             return didRemoveItem;
         }
 
@@ -123,21 +138,7 @@ namespace CustomList
 
             return newStoredArray;
         }
-
-        private T[] StoreNewValuesAfterRemoval(T item)
-        {
-            T[] newStoredArray = new T[capacity];
-            for (int i = 0; i < count; i++)
-            {
-                if (storedValues[i].Equals(item))
-                {
-                    continue;
-                }
-                newStoredArray[i] = storedValues[i];
-            }
-
-            return newStoredArray;
-        }
+       
 
         private bool CountReachedCapacity()
         {

@@ -1,25 +1,13 @@
 ﻿<Properties StartupConfiguration="{B17FB8F1-AD0E-496A-9B89-39F5005AFD29}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CustomListTest/CustomList_OverloadPlus_Test.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CustomList/Program.cs">
     <Files>
-      <File FileName="CustomListTest/CustomList_Add_Test.cs" Line="88" Column="12" />
-      <File FileName="CustomList/NList.cs" Line="67" Column="1" />
-      <File FileName="CustomListTest/CustomList_Iteration_Test.cs" Line="83" Column="1" />
-      <File FileName="CustomList/Program.cs" Line="11" Column="13" />
-      <File FileName="CustomListTest/CustomList_Remove_Test.cs" Line="87" Column="1" />
-      <File FileName="CustomListTest/CustomList_OverloadPlus_Test.cs" Line="23" Column="41" />
+      <File FileName="CustomList/NList.cs" Line="50" Column="31" />
+      <File FileName="CustomList/Program.cs" Line="26" Column="1" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="CustomList" expanded="True">
-            <Node name="CustomListTest" expanded="True">
-              <Node name="CustomListTest" expanded="True">
-                <Node name="CustomList_OverloadPlus_Test" expanded="True">
-                  <Node name="AddsTwoNLists" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="CustomList" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
@@ -27,9 +15,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/trent/Desktop/devCodeCamp/Projects/CustomList/CustomList/Program.cs" relfile="CustomList/Program.cs" line="22" column="1" />
+      <Breakpoint file="/Users/trent/Desktop/devCodeCamp/Projects/CustomList/CustomList/Program.cs" relfile="CustomList/Program.cs" line="41" column="1" />
       <Breakpoint file="/Users/trent/Desktop/devCodeCamp/Projects/CustomList/CustomListTest/CustomList_Iteration_Test.cs" relfile="CustomListTest/CustomList_Iteration_Test.cs" line="18" column="1" />
-      <Breakpoint file="/Users/trent/Desktop/devCodeCamp/Projects/CustomList/CustomListTest/CustomList_OverloadPlus_Test.cs" relfile="CustomListTest/CustomList_OverloadPlus_Test.cs" line="11" column="1" />
+      <Breakpoint file="/Users/trent/Desktop/devCodeCamp/Projects/CustomList/CustomList/Program.cs" relfile="CustomList/Program.cs" line="26" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

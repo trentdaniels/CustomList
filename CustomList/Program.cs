@@ -13,12 +13,23 @@ namespace CustomList
 
             for (int i = 0; i < 10; i++)
             {
-                list1.Add(i);
-                list2.Add(i);
+                if (i % 2 == 0)
+                {
+                    list1.Add(i);
+                }
+                if (i < 5)
+                {
+                    list2.Add(i);
+                }
             }
-            list3 = list1 + list2;
-            Console.WriteLine(list3.Count);
 
+            list3 = list1 - list2;
+            for (int i = 0; i < list3.Count; i++)
+            {
+                Console.WriteLine(list3[i]);
+
+            }
+            Console.WriteLine(list3.Count);
 
         }
     }
