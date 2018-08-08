@@ -1,25 +1,17 @@
 ﻿<Properties StartupConfiguration="{B17FB8F1-AD0E-496A-9B89-39F5005AFD29}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CustomListTest/CustomList_OverloadPlus_Test.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CustomListTest/CustomList_Zip_Test.cs">
     <Files>
       <File FileName="CustomList/NList.cs" Line="31" Column="36" />
-      <File FileName="CustomList/Program.cs" Line="24" Column="52" />
-      <File FileName="CustomListTest/CustomList_Count_Test.cs" Line="1" Column="1" />
-      <File FileName="CustomListTest/CustomList_Iteration_Test.cs" Line="77" Column="30" />
-      <File FileName="CustomListTest/CustomList_OverloadMinus_Test.cs" Line="14" Column="13" />
-      <File FileName="CustomListTest/CustomList_Remove_Test.cs" Line="31" Column="42" />
-      <File FileName="CustomListTest/CustomList_Indexer_Test.cs" Line="47" Column="31" />
-      <File FileName="CustomListTest/CustomList_OverloadPlus_Test.cs" Line="21" Column="30" />
+      <File FileName="CustomList/Program.cs" Line="21" Column="83" />
+      <File FileName="CustomListTest/CustomList_ToString_Test.cs" Line="30" Column="49" />
+      <File FileName="CustomListTest/CustomList_Zip_Test.cs" Line="75" Column="1" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
           <Node name="CustomList" expanded="True">
             <Node name="CustomListTest" expanded="True">
-              <Node name="CustomListTest" expanded="True">
-                <Node name="CustomList_OverloadPlus_Test" expanded="True">
-                  <Node name="EveryListGetsAppendedToEnd" selected="True" />
-                </Node>
-              </Node>
+              <Node name="CustomListTest" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>
@@ -29,7 +21,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/trent/Desktop/devCodeCamp/Projects/CustomList/CustomList/Program.cs" relfile="CustomList/Program.cs" line="40" column="1" />
+      <Breakpoint file="/Users/trent/Desktop/devCodeCamp/Projects/CustomList/CustomList/Program.cs" relfile="CustomList/Program.cs" line="42" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

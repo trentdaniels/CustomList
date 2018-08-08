@@ -192,10 +192,6 @@ namespace CustomList
         {
             int listWithGreaterCount = list1.count > list2.count ? list1.count : list2.count;
 
-            if (listWithGreaterCount == 0)
-            {
-                throw new Exception("You can't zip up 2 empty custom lists.");
-            }
 
             for (int i = 0; i < listWithGreaterCount; i++)
             {
