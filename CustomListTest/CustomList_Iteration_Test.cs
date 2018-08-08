@@ -8,7 +8,7 @@ namespace CustomListTest
     public class CustomList_Iteration_Test
     {
         [Test]
-        [ExpectedException(typeof(IndexOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void ChangesValueAtIndex()
         {
             int num1 = 10;
@@ -30,6 +30,7 @@ namespace CustomListTest
         }
 
         [Test]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void GetsIndexAfterIteration()
         {
             NList<int> nums = new NList<int>();
@@ -40,7 +41,7 @@ namespace CustomListTest
                 nums.Add(nums[i]);
             }
 
-            Assert.AreNotEqual(1, nums[3]);
+            Assert.AreEqual(1, nums[3]);
         }
 
         [Test]
@@ -61,7 +62,7 @@ namespace CustomListTest
         {
             NList<int> nums = new NList<int>() { 15, 14, 13, 1, 2, 3 };
 
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 3; i++)
             {
                 foreach(int num in nums)
                 {
@@ -73,8 +74,26 @@ namespace CustomListTest
 
             }
 
-            Assert.AreEqual(3, nums.Count);
+            Assert.AreEqual(4, nums.Count);
         }
+
+        [Test]
+        public void ForEachLoop()
+        {
+            NList<NList<int>> bigList = new NList<NList<int>>() { };
+            for (int i = 0; i < 10; i++)
+            {
+                bigList.Add(new NList<int>());
+            }
+
+            foreach (NList<int>list in bigList)
+            {
+                list.Add(1);
+            }
+
+            Assert.AreEqual(1, bigList[5][0]);
+        }
+
 
 
                            

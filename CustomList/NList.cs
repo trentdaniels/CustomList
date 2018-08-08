@@ -10,11 +10,28 @@ namespace CustomList
         private int count;
         private T[] storedValues;
         private int capacity;
+        private int capacityIncreaser;
 
         public T this[int index]
         {
-            get => storedValues[index];
-            set => storedValues[index] = value;
+            get
+            {
+                if (index >= count)
+                {
+                    ArgumentException argument = new ArgumentOutOfRangeException();
+                    throw argument;
+                }
+                return storedValues[index];
+            }
+            set 
+            {
+                if (index >= count)
+                {
+                    ArgumentException argument = new ArgumentOutOfRangeException();
+                    throw argument;
+                }
+                storedValues[index] = value;
+            }
         }
 
         public int Count { get => count; }
@@ -26,6 +43,7 @@ namespace CustomList
             count = 0;
             capacity = 1;
             storedValues = new T[capacity];
+            capacityIncreaser = 0;
 
         }
 
@@ -53,11 +71,11 @@ namespace CustomList
                 newList.Add(list1[i]);
             }
       
-            for (int i = 0; i < newList.count; i++)
+            for (int i = 0; i < list1.count; i++)
             {
                 for (int j = 0; j < list2.count; j++)
                 {
-                    if (newList[i].Equals(list2[j]))
+                    if (list1[i].Equals(list2[j]))
                     {
                         newList.Remove(list2[j]);
 
@@ -79,7 +97,8 @@ namespace CustomList
 
             if (CountReachedCapacity())
             {
-                capacity *= 2;
+                capacity *= (2 + (2 * capacityIncreaser));
+                capacityIncreaser++;
             }
             storedValues = StoreNewValues();
 
@@ -101,10 +120,12 @@ namespace CustomList
         {
             bool didRemoveItem = false;
             int skipCounter = 0;
+            T[] newStoredArray = new T[capacity];
 
             for (int i = 0; i < count; i++)
             {
-                if(storedValues[i].Equals(item))
+                T currentValue = storedValues[i];
+                if(Equals(currentValue, item))
                 {
                     skipCounter++;
                     didRemoveItem = true;
@@ -150,7 +171,7 @@ namespace CustomList
             string newString = "";
             for (int i = 0; i < count; i++)
             {
-                newString += $"IndexAt[{i}]:{storedValues[i]} ";
+                newString += $"{storedValues[i]}";
             }
             return newString;
         }
@@ -160,17 +181,47 @@ namespace CustomList
             string newString = "";
             for (int i = 0; i < count; i++)
             {
-                if(i < count - 1)
-                {
-                    newString += $"{storedValues[i]}{separator}";
-                }
-
-                if (i == count - 1)
-                {
-                    newString += $"{storedValues[i]}";
-                }
+                
+                newString += i == count - 1 ? $"{storedValues[i]}" : $"{storedValues[i]}{separator}";
+               
             }
             return newString;
+        }
+
+        public void Zip (NList<T>list1, NList<T>list2)
+        {
+            int listWithGreaterCount = list1.count > list2.count ? list1.count : list2.count;
+
+            if (listWithGreaterCount == 0)
+            {
+                throw new Exception("You can't zip up 2 empty custom lists.");
+            }
+
+            for (int i = 0; i < listWithGreaterCount; i++)
+            {
+                if (i < list1.count && i < list2.count)
+                {
+                    Add(list1[i]);
+                    Add(list2[i]);
+                }
+                else if (i >= list1.count && i >= list2.count)
+                {
+                    break;
+                }
+                else if (i >= list1.count)
+                {
+                    Add(list2[i]);
+                }
+                else if (i >= list2.count)
+                {
+                    Add(list1[i]);
+                }
+                else
+                {
+                    break;
+                }
+            }
+
         }
 
        

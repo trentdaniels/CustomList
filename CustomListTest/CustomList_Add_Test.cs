@@ -94,14 +94,14 @@ namespace CustomListTest
         }
 
 
-        //[Test]
-        //public void AddWithEnumerator()
-        //{
-        //    NList<int> nums = new NList<int>() { 1, 2, 3 };
-        //    nums.Add(4);
+        [Test]
+        public void AddWithEnumerator()
+        {
+            NList<int> nums = new NList<int>() { 1, 2, 3 };
+            nums.Add(4);
 
-        //    Assert.AreEqual(4, nums[3]);
-        //}
+            Assert.AreEqual(4, nums[3]);
+        }
 
     }
 }

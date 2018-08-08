@@ -56,17 +56,16 @@ namespace CustomListTest
         }
 
         [Test]
-        [ExpectedException(typeof(IndexOutOfRangeException))]
         public void EveryListGetsAppendedToEnd()
         {
             NList<NList<int>> totalList = new NList<NList<int>>();
 
             for (int i = 0; i < 50; i++)
             {
-                totalList[i] = new NList<int>() + new NList<int>();
+                totalList.Add(new NList<int>() + new NList<int>());
             }
 
-            Assert.Equals(2, totalList[49].Count);
+            Assert.AreNotEqual(2, totalList[49].Count);
         }
 
         [Test]
