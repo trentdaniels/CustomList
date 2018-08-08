@@ -7,11 +7,11 @@ namespace CustomList
     {
         public static void Main(string[] args)
         {
-            NList<int> list3 = new NList<int>() {1,2,3,4};
-            NList<int> list1 = new NList<int>();
-            NList<int> list2 = new NList<int>();
-
-
+            NList<string> nums = new NList<string>() { "Trent", "Marco", "Aly" };
+            string numsToString = nums.ToString();
+            string numsToStringWithSeparator = nums.ToString(", ");
+            Console.WriteLine(numsToString);
+            Console.WriteLine(numsToStringWithSeparator);
             // loop through list1 and add values into list3 before remove function
         }
     }

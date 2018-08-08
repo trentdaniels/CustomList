@@ -145,6 +145,34 @@ namespace CustomList
             return counter;
         }
 
+        public override string ToString()
+        {
+            string newString = "";
+            for (int i = 0; i < count; i++)
+            {
+                newString += $"IndexAt[{i}]:{storedValues[i]} ";
+            }
+            return newString;
+        }
+
+        public string ToString(string separator)
+        {
+            string newString = "";
+            for (int i = 0; i < count; i++)
+            {
+                if(i < count - 1)
+                {
+                    newString += $"{storedValues[i]}{separator}";
+                }
+
+                if (i == count - 1)
+                {
+                    newString += $"{storedValues[i]}";
+                }
+            }
+            return newString;
+        }
+
        
 
         private bool CountReachedCapacity()
