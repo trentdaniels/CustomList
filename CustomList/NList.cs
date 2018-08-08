@@ -52,7 +52,7 @@ namespace CustomList
             {
                 for (int j = 0; j < list2.count; j++)
                 {
-                    if (list2[i].Equals(list2[j]))
+                    if (newList[i].Equals(list2[j]))
                     {
                         newList.Remove(list2[j]);
 

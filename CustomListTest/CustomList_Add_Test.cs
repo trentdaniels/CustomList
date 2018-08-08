@@ -78,6 +78,22 @@ namespace CustomListTest
 
         }
 
+        [Test]
+        public void Index0AfterAddMoreThan50Items()
+        {
+            NList<int> nums = new NList<int>();
+
+            for (int i = 0; i <= 55; i++)
+            {
+                nums.Add(i);
+            }
+
+            Assert.AreEqual(0, nums[0]);
+
+
+        }
+
+
         //[Test]
         //public void AddWithEnumerator()
         //{

@@ -30,6 +30,7 @@ namespace CustomList
 
             }
             Console.WriteLine(list3.Count);
+            Console.WriteLine(list1.Count);
 
         }
     }
