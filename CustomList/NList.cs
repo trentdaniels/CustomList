@@ -26,6 +26,7 @@ namespace CustomList
             count = 0;
             capacity = 1;
             storedValues = new T[capacity];
+
         }
 
         public static NList<T> operator + (NList<T> list1, NList<T> list2)
@@ -84,6 +85,17 @@ namespace CustomList
 
         }
 
+        private T[] StoreNewValues()
+        {
+            T[] newStoredArray = new T[capacity];
+            for (int i = 0; i < count; i++)
+            {
+                newStoredArray[i] = storedValues[i];
+            }
+
+            return newStoredArray;
+        }
+
       
         public bool Remove(T item)
         {
@@ -132,16 +144,7 @@ namespace CustomList
             }
             return counter;
         }
-        private T[] StoreNewValues()
-        {
-            T[] newStoredArray = new T[capacity];
-            for (int i = 0; i < count; i++)
-            {
-                newStoredArray[i] = storedValues[i];
-            }
 
-            return newStoredArray;
-        }
        
 
         private bool CountReachedCapacity()
@@ -154,9 +157,11 @@ namespace CustomList
 
         public IEnumerator GetEnumerator()
         {
-            yield return 1;
+            for (int i = 0; i < count; i++)
+            {
+                yield return storedValues[i];
+            }
         }
-
 
 
 
