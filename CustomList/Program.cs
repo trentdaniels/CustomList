@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CustomList
 {
@@ -6,22 +7,18 @@ namespace CustomList
     {
         public static void Main(string[] args)
         {
-            NList<int> nums = new NList<int>();
+            NList<int> list3 = new NList<int>();
+            NList<int> list1 = new NList<int>();
+            NList<int> list2 = new NList<int>();
 
-            nums.Remove(3);
-            nums.Add(2);
-            nums.Add(3);
-            nums.Add(4);
-            nums.Add(5);
+            for (int i = 0; i < 10; i++)
+            {
+                list1.Add(i);
+                list2.Add(i);
+            }
+            list3 = list1 + list2;
+            Console.WriteLine(list3.Count);
 
-            nums.Remove(3);
-
-            Console.WriteLine(nums[0]);
-            Console.WriteLine(nums[1]);
-            Console.WriteLine(nums[2]);
-
-            Console.WriteLine(nums.Count);
-            Console.ReadLine();
 
         }
     }

@@ -24,7 +24,7 @@ namespace CustomListTest
         {
             int num1 = 20;
             int num2 = 30;
-            NList<int> nums = new NList<int>() {15, 30, 45};
+            NList<int> nums = new NList<int>();
 
             nums.Add(num1);
             nums.Add(num2);
@@ -78,14 +78,14 @@ namespace CustomListTest
 
         }
 
-        [Test]
-        public void AddWithEnumerator()
-        {
-            NList<int> nums = new NList<int>() { 1, 2, 3 };
-            nums.Add(4);
+        //[Test]
+        //public void AddWithEnumerator()
+        //{
+        //    NList<int> nums = new NList<int>() { 1, 2, 3 };
+        //    nums.Add(4);
 
-            Assert.AreEqual(4, nums[3]);
-        }
+        //    Assert.AreEqual(4, nums[3]);
+        //}
 
     }
 }

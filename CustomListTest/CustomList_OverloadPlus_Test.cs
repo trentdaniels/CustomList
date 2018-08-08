@@ -1,6 +1,8 @@
 ﻿using NUnit.Framework;
 using System;
 using CustomList;
+using System.Collections.Generic;
+
 namespace CustomListTest
 {
     [TestFixture]
@@ -10,13 +12,17 @@ namespace CustomListTest
         public void AddsTwoNLists()
         {
             NList<int> list3 = new NList<int>();
+            NList<int> list1 = new NList<int>();
+            NList<int> list2 = new NList<int>();
 
-            NList<int> list1 = new NList<int>() { 1, 2, 3 };
-            NList<int> list2 = new NList<int>() { 4, 5, 6 };
-
+            for (int i = 0; i < 10; i++)
+            {
+                list1.Add(i);
+                list2.Add(i);
+            }
             list3 = list1 + list2;
 
-            Assert.AreEqual(6, list3.Count);
+            Assert.AreEqual(20, list3.Count);
         }
 
         [Test]
@@ -24,9 +30,13 @@ namespace CustomListTest
         {
             NList<int> list3 = new NList<int>();
 
-            NList<int> list1 = new NList<int>() { 1, 2, 3 };
-            NList<int> list2 = new NList<int>() { 4, 5, 6 };
-
+            NList<int> list1 = new NList<int>();
+            NList<int> list2 = new NList<int>();
+            for (int i = 0; i < 3; i++)
+            {
+                list1.Add(i);
+            }
+            list2.Add(3);
             list3 = list1 + list2;
 
             Assert.AreEqual(3, list3[3]);
@@ -35,27 +45,28 @@ namespace CustomListTest
         [Test]
         public void CountContinuesUpdate()
         {
-            NList<int> totalList = new NList<int>(){};
+            NList<List<int>> totalList = new NList<List<int>>();
 
             for (int i = 0; i < 50; i++)
             {
-                totalList += new NList<int>() { i };
+                totalList.Add(new List<int>());
             }
 
             Assert.AreEqual(50, totalList.Count);
         }
 
         [Test]
+        [ExpectedException(typeof(IndexOutOfRangeException))]
         public void EveryListGetsAppendedToEnd()
         {
-            NList<int> totalList = new NList<int>() { };
+            NList<NList<int>> totalList = new NList<NList<int>>();
 
             for (int i = 0; i < 50; i++)
             {
-                totalList += new NList<int>() { i };
+                totalList[i] = new NList<int>() + new NList<int>();
             }
 
-            Assert.IsTrue(totalList[49] == 49);
+            Assert.Equals(2, totalList[49].Count);
         }
 
         [Test]
@@ -63,9 +74,9 @@ namespace CustomListTest
         {
             NList<int> list3 = new NList<int>();
 
-            NList<int> list1 = new NList<int>() { 3 };
-            NList<int> list2 = new NList<int>() { };
-
+            NList<int> list1 = new NList<int>();
+            NList<int> list2 = new NList<int>();
+            list1.Add(2);
             list3 = list1 + list2;
 
             Assert.AreEqual(1, list3.Count);
@@ -83,17 +94,6 @@ namespace CustomListTest
 
             Assert.AreEqual(0, list3.Count);
         }
-        //[Test]
-        //[ExpectedException(typeof(ArrayTypeMismatchException))]
-        //public void AddDifferentTypeLists()
-        //{
-        //    NList<string> list3 = new NList<string>();
-
-        //    NList<string> list1 = new NList<string>() { "trent", "daniels", "false" };
-        //    NList<int> list2 = new NList<int>() { 2 };
-
-        //    list3 = list1 + list2;
-        //}
 
     }
 }

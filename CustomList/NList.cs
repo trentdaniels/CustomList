@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace CustomList
 {
-    public class NList<T> : IEnumerable<T>
+    public class NList<T> //: IEnumerable<T>
     {
         // Members
         private int count;
@@ -27,6 +27,23 @@ namespace CustomList
             capacity = 1;
             storedValues = new T[capacity];
         }
+
+        public static NList<T> operator +(NList<T> list1, NList<T> list2)
+        {
+            NList<T> newList = new NList<T>();
+
+            for (int i = 0; i < list1.count; i++)
+            {
+                newList.Add(list1[i]);
+            }
+            for(int i = 0; i < list2.count; i++)
+            {
+                newList.Add(list2[i]);
+            }
+            return newList;
+
+        }
+
 
 
         // Methods
@@ -61,6 +78,10 @@ namespace CustomList
 
             }
             count = UpdateCountDown();
+            if(didRemoveItem == false)
+            {
+                throw new Exception("You dumbass. Remove something IN THE LIST next time.");
+            }
             return didRemoveItem;
         }
 
@@ -123,33 +144,21 @@ namespace CustomList
             return count == capacity;
         }
 
-        public static NList<T> operator + (NList<T>list1, NList<T>list2)
-        {
-            NList<T> newList = new NList<T>();
 
-            foreach(T item1 in list1)
-            {
-                newList.Add(item1);
-            }
-            foreach(T item2 in list2)
-            {
-                newList.Add(item2);
-            }
-            return newList;
-        }
+        //IEnumerator IEnumerable.GetEnumerator()
+        //{
+        //    return GetEnumerator();
+        //}
 
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            yield return GetEnumerator();
-        }
-
-        public IEnumerator<T> GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        //public IEnumerator<T> GetEnumerator()
+        //{
+        //    yield return GetEnumerator();
+        //}
 
 
 
 
     }
+
+
 }
