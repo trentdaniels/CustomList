@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace CustomList
 {
-    public class NList<T> : IEnumerable
+    public class NList<T> : IEnumerable, IComparer
     {
         // Members
         private int count;
@@ -227,7 +227,27 @@ namespace CustomList
             return count == capacity;
         }
 
+        public NList<T> Sort()
+        {
+            NList<T> sortedList = new NList<T>();
 
+
+            return sortedList;    
+        }
+
+        public int Compare(object thisItem, object nextItem)
+        {
+            if (thisItem is int)
+            {
+                return (int)thisItem - (int)nextItem;
+            }
+            if (thisItem is string)
+            {
+                return ((string)thisItem).Length - ((string)nextItem).Length;
+            }
+            return -1;
+
+        }
 
 
         public IEnumerator GetEnumerator()
