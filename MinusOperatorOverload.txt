@@ -1,0 +1,37 @@
+NList<T> Operator -
+
+Removes each item in a specified NList<T> from another NList<T> if they are equal and returns the new NList<T>.
+
+[SYNTAX]
+
+NList<T> newList = NList<T>list1 - NList<T>list2;
+
+
+[PARAMETERS]
+
+list1
+Type: NList<T>
+The object whose items get checked for equality. If equality between lists is found, then newList will not contain that item.
+
+list2
+Type: NList<T>
+The object whose items check if they are the same as the items in list1. If equality between lists is found, then newList will not contain that item.
+
+
+[RETURN VALUE]
+newList
+Type: NList<T>
+The returned list is equal to list1 without any items contained in list2. If list 1 is empty, then newList will be an empty list. If list2 is empty, then newList will be equal to list1.
+
+[REMARKS]
+Each NList<T> involved in the operation must be of the same Type T.
+
+
+[EXAMPLES]
+The following examples demonstrate how to use the - operator with NList<T>.
+
+class MainClass     {         public static void Main(string[] args)         {             // Example1             NList<int> newListExample1 = new NList<int>();             NList<int> list1 = new NList<int>() {1, 2, 3, 4, 5} ;             NList<int> list2 = new NList<int>() { 2, 4, 6, 8, 10 } ;              	// newListExample1 will return as a NList<int> with 
+		// values { 1, 3, 5 }.            	 // Equal items in both lists are 2 and 4.             newListExample1 = list1 - list2;  
+             // Example2             NList<int> newListExample2 = new NList<int>();             NList<int> list3 = new NList<int>() { 1, 3, 3, 7, 5 } ;             NList<int> list4 = new NList<int>() { 2, 4, 6, 8, 10 } ;              	// newListExample2 will return as a NList<int> with values 		
+		// { 1, 3, 3, 7, 5 } because there are no equal items 
+		// in list3 and list 4.                         newListExample2 = list3 - list4;              // Example3             NList<int> newListExample3 = new NList<int>();             NList<int> list5 = new NList<int>() { } ;             NList<int> list6 = new NList<int>() { 2, 4, 6, 8, 10 } ;              	// newListExample3 will return as an empty NList<int> because              	// there are no equal items in list5 to compare to.             newListExample3 = list5 - list6;         }     } 

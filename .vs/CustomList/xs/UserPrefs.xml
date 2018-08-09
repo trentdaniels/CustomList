@@ -1,17 +1,13 @@
 ﻿<Properties StartupConfiguration="{B17FB8F1-AD0E-496A-9B89-39F5005AFD29}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="CustomList/NList.cs">
     <Files>
-      <File FileName="CustomList/NList.cs" Line="233" Column="13" />
-      <File FileName="CustomList/Program.cs" Line="13" Column="13" />
+      <File FileName="CustomList/NList.cs" Line="233" Column="1" />
+      <File FileName="CustomList/Program.cs" Line="13" Column="1" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="CustomList" expanded="True">
-            <Node name="CustomListTest" expanded="True">
-              <Node name="CustomListTest" expanded="True" />
-            </Node>
-          </Node>
+          <Node name="CustomList" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
