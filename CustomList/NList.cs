@@ -272,11 +272,8 @@ namespace CustomList
             }
             if (thisItem is string)
             {
-                if (((string)thisItem).Length - ((string)nextItem).Length == 0)
-                {
-                    return SortAlphabetically(thisItem, nextItem);
-                }
-                return ((string)thisItem).Length - ((string)nextItem).Length;
+                return SortAlphabetically(thisItem, nextItem);
+
             }
             if (thisItem is T[])
             {
@@ -288,7 +285,7 @@ namespace CustomList
 
         }
 
-        public int SortAlphabetically(object thisItem, object nextItem)
+        private int SortAlphabetically(object thisItem, object nextItem)
         {
             int compareInteger;
             for (int i = 0; i < ((string)thisItem).Length; i++)
