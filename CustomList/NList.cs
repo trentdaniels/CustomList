@@ -227,29 +227,87 @@ namespace CustomList
             return count == capacity;
         }
 
-        public NList<T> Sort()
+        public void Sort()
         {
-            NList<T> sortedList = new NList<T>();
+            T[] comparedArray = new T[capacity];
+            for (int i = 0; i < count; i++ )
+            {
+                comparedArray[i] = storedValues[i];
+            }
 
+            for (int i = 0; i < count - 1; i++)
+            {
+                int compareInteger;
+                compareInteger = Compare(storedValues[i], storedValues[i+1]);
+                if (compareInteger > 0)
+                {
+                    storedValues[i] = comparedArray[i + 1];
+                    storedValues[i + 1] = comparedArray[i];
+                    Sort();
+                    return;
+                }
 
-            return sortedList;    
+                if (compareInteger == 0)
+                {
+                    storedValues[i] = storedValues[i];
+                }
+                else
+                {
+                    storedValues[i] = storedValues[i];
+                    storedValues[i + 1] = storedValues[i + 1];
+
+                }
+
+            }
         }
+
+
 
         public int Compare(object thisItem, object nextItem)
         {
-            if (thisItem is int)
+
+            if (thisItem is int || thisItem is decimal || thisItem is double || thisItem is float)
             {
                 return (int)thisItem - (int)nextItem;
             }
             if (thisItem is string)
             {
+                if (((string)thisItem).Length - ((string)nextItem).Length == 0)
+                {
+                    return SortAlphabetically(thisItem, nextItem);
+                }
                 return ((string)thisItem).Length - ((string)nextItem).Length;
             }
-            return -1;
+            if (thisItem is T[])
+            {
+                return ((T[])thisItem).Length - ((T[])nextItem).Length;
+            }
+            return thisItem.ToString().Length - nextItem.ToString().Length;
+
+
 
         }
 
-
+        public int SortAlphabetically(object thisItem, object nextItem)
+        {
+            int compareInteger;
+            for (int i = 0; i < ((string)thisItem).Length; i++)
+            {
+                byte thisByte = Convert.ToByte(((string)thisItem)[i]);
+                byte nextByte = Convert.ToByte(((string)nextItem)[i]);
+                if (thisByte > nextByte)
+                {
+                    compareInteger = 1;
+                    return compareInteger;
+                }
+                if (thisByte < nextByte)
+                {
+                    compareInteger = -1;
+                    return compareInteger;
+                }
+            }
+            return 0;
+        }
         public IEnumerator GetEnumerator()
         {
             for (int i = 0; i < count; i++)
